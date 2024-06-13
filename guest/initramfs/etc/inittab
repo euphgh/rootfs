@@ -1,0 +1,7 @@
+::sysinit:/bin/busybox mount -t proc proc /proc
+::sysinit:/bin/busybox mount -t sysfs sysfs /sys
+::sysinit:/bin/busybox mount -t tmpfs tmpfs /tmp
+::sysinit:/bin/busybox --install -s
+::sysinit:/bin/mkdir -p /dev/pts
+::sysinit:/etc/init.d/rcS
+::respawn:-/bin/sh

@@ -1,0 +1,10 @@
+#! /bin/busybox sh
+
+/bin/busybox --install -s
+
+/bin/mount -a
+
+mkdir -p /dev
+/bin/mount -t devtmpfs devtmpfs /dev
+
+cat /etc/motd
